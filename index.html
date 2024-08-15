@@ -1,0 +1,109 @@
+<!-- https://youtu.be/eeeysi5bGcE?t=1184 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Shoes Website HTML CSS & JS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Box icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Remix icon box -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Google font icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <img src="img/webLogo.png" alt="main nike logo">
+        </a>
+        <ul class="navbar">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Snkrs</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+            <a href="#"><i class="ri-search-2-line"></i></a>
+            <div class="bx bx-menu" id="menu-icon"> </div>
+        </div>
+
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-img" data-aos="zoom-in" data-aos-duration="2000">
+            <img src="img/Shoes/shoes0.png" alt="" class="one">
+        </div>
+        <div class="hero-text">
+            <h1 class="shoes-title" data-aos="fade-right" data-aos-duration="1500">Nike Pegasus <br> 41 Electric</h1>
+            <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="200">Nike's 1st Lifestyle Air Max returns
+                with a vibrant color
+                gradient that's sure to turn heads.vibrant
+                color gradient that's sure to turn heads.</p>
+            <h5 class="shoes-price" data-aos="zoom-in" data-aos-duration="1400" data-aos-delay="300">$450.00</h5>
+            <div class="hero-btn" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="300">
+                <a href="#" class="btn">Add To
+                    Bag</a>
+                <a href="#" class="btn2">View
+                    Details</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="content">
+        <div class="box" data-aos="zoom-in-right" data-aos-duration="1200" data-aos-delay="100">
+            <li><img src="img/p1.png" onclick="slider('img/Shoes/shoes0.png','Nike Pegasus <br> 41 Electric',450)"
+                    alt="">
+            </li>
+        </div>
+        <div class="box" data-aos="zoom-out-left" data-aos-duration="1300" data-aos-delay="150">
+            <li><img src="img/p3.png" alt="" onclick="slider('img/Shoes/shoes1.png','Nike <br> P-6000',210)"></li>
+        </div>
+        <div class="box" data-aos="zoom-in-right" data-aos-duration="1200" data-aos-delay="200">
+            <li><img src="img/p4.png" alt="" onclick="slider('img/Shoes/shoes2.png','Nike Zoom <br> Vomero 5',99)">
+            </li>
+        </div>
+
+    </div>
+    <a href="#" class="scroll">
+        <i class="ri-scroll-to-bottom-line"></i>
+    </a>
+
+    <script type="text/javascript">
+        function slider(anything, name, price) {
+            document.querySelector('.one').src = anything;
+            document.querySelector('.shoes-title').innerHTML = name;
+            document.querySelector('.shoes-price').innerHTML = `$` + price + '.00'
+        }
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('open')
+
+        })
+
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offest: 1
+        });
+    </script>
+</body>
+
+</html>
